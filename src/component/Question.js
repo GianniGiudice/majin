@@ -30,7 +30,6 @@ const Question = () => {
 
         fetch('https://127.0.0.1:8000/api/questions/particular?' + new URLSearchParams(history)).then(response => response.json()).then((data) => {
                 let res = data['hydra:member'];
-                console.log(res);
                 if (res.length === 0) {
                     setEnd(true);
                 }
@@ -40,7 +39,6 @@ const Question = () => {
                     setGuess(res[0].name);
                 }
                 else {
-                    console.log('ici');
                     fetch('https://127.0.0.1:8000/api/questions/' + nb).then(response => response.json()).then((data) => {
                         setNb(nb + 1);
                         setQuestion({id: data.id, value: data.value});
