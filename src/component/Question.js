@@ -4,7 +4,7 @@ const Question = () => {
     const [question, setQuestion] = useState({});
     const [answer, setAnswer] = useState('OUI');
     const [history, setHistory] = useState([]);
-    const [nb, setNb] = useState(1);
+    const [nb, setNb] = useState(2);
     const [end, setEnd] = useState(false);
     const [found, setFound] = useState(false);
     const [guess, setGuess] = useState('');
